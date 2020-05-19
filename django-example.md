@@ -185,3 +185,6 @@ choice_set是一个RelatedManager可以创建Choice与Question实例相关的对
 
 如果不喜欢Django自动选择的命名foo_set，或者如果你有多个外键用于同一个模型并需要区分它们，则可以使用related_name参数来选择自己的覆盖名称。
 ```
+
+
+Question.objects.filter(pub_date__lte=timezone.now()) returns a queryset containing Questions whose pub_date is less than or equal to - that is, earlier than or equal to - timezone.now.
